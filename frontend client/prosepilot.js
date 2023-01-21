@@ -55,16 +55,43 @@ class MyCustomElement extends HTMLElement {
   }
   
   customElements.define("my-custom-element", MyCustomElement);
+  var newTexts = new Object(); // stores different non-original versions of texts
+  var dict = {
+    "default": [],
+    "reddit": [],
+    "academic": [],
+    "nytimes": []
+  };
   async function prose() {
     const dropdown = document.querySelector('my-custom-element').shadowRoot.querySelector("select");
     const selectedValue = dropdown.value;
     const elements = document.getElementsByClassName("prosepilot-text-select");
-    for (const element of elements) {
-        // Get the text from the element and nested elements
-        const text = element.textContent;
-        const result = await callgpt(text, selectedValue)
-        element.textContent = result
+    // if cached, load array. If returning to original, load array
+    if (dict[selectedValue].length!=0 || selectedValue=="default") {
+        var i = 0;
+        for (const element of elements) {
+            element.textContent = dict[selectedValue][i]
+        }
+        i++;
+        return;
     }
+    else {
+        // save original if needed
+        if (dict["default"].length==0) {
+            for (const element of elements) {
+                dict["default"].push(element.textContent)
+            }
+        } 
+        // do API call and save to array
+        for (const element of elements) {
+            const text = element.textContent;
+            // Get the text from the element and nested elements
+            const result = await callgpt(text, selectedValue)
+            element.textContent = result
+            dict[selectedValue].push(result)
+        }
+    }
+    
 
 }
 
