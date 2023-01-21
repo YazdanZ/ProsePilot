@@ -6,7 +6,7 @@ class MyCustomElement extends HTMLElement {
     connectedCallback() {
         this.shadow.innerHTML = `
         
-        <select onchange="prose()">
+        <select class="pilot-selector" onchange="prose()">
             <option value="default">Change Prose</option>
             <option value="reddit">Reddit</option>
             <option value="academic">Academic</option>
@@ -39,7 +39,54 @@ class MyCustomElement extends HTMLElement {
   }
   
   customElements.define("my-custom-element", MyCustomElement);
-  function prose() {
-    console.log("Testing dropdown!");
+  async function prose() {
+    const dropdown = document.querySelector('my-custom-element').shadowRoot.querySelector("select");
+    const selectedValue = dropdown.value;
+    const elements = document.getElementsByClassName("prosepilot-text-select");
+    for (const element of elements) {
+        // Get the text from the element and nested elements
+        const text = element.textContent;
+        const result = await callgpt(text, selectedValue)
+        element.textContent = result
+    }
+
 }
+
+async function callgpt(inputtext, style) {
+    pilotButton = document.getElementsByName("my-custom-element");
+    const apiKey = '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';
+    const model = "text-davinci-003";
+    //const prompt = "Say this is a test:";
+    const prompt = "Write the following text in the style of " + style + ":\n" + inputtext;
+    const max_tokens = 256;
+    const temperature = 0.7;
+    const url = "https://api.openai.com/v1/completions";
+    const data = {
+        "model": model,
+        "prompt": prompt,
+        "max_tokens": max_tokens,
+        "temperature": temperature
+    };
+    return new Promise((resolve, reject) => {
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${apiKey}`
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            resolve(data['choices'][0]['text']);
+            // Do something with the response data
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+      });
+
+    
+}
+
   
