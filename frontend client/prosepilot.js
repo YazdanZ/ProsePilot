@@ -8,7 +8,7 @@ class MyCustomElement extends HTMLElement {
         this.shadow.innerHTML = `
         <button>
             <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google logo">
-            <span>Translate</span>
+            <span>Change Prose</span>
         </button>
         <style>button {
             background-color: #4285F4;
