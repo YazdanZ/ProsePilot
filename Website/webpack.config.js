@@ -40,7 +40,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/html/index.html",
-      title: "Yazdan Zinati's Homepage",
+      title: "ProsePilot - Homepage",
       filename: "index.html",
       inject: "body",
     }),
