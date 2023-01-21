@@ -1,9 +1,9 @@
-# ProsePilot.ai
+# ProsePilot 
 
 <div align="center">
 
 [![CI](https://github.com/YazdanZ/ProsePilot/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/YazdanZ/ProsePilot/actions/workflows/main.yml)
-[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://ProsePilot.ai/)
+[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://yazdanz.github.io/ProsePilot/)
 
 </div>
 Website for ProsePilot. Built mostly with vanilla js, html, and css.
