@@ -1,5 +1,6 @@
-# Good Relay
+# Base backend code comes from Jackson Bates's [Good Relay repository](https://github.com/JacksonBates/example-goodreads-api-relay)
 
+Original Good Relay README:
 A simple example node backend that demonstrates how to hit a 3rd party API without exposing your API key in your frontend code.
 
 _Note_ the goodreads API returns XML which is tricky to work with. To see a more simple verison of this, checkout the `weather-json-example` branch. To use that branch you'll need a free API key from Open Weather Map. There is no front-end for it, so you need to interact with it via curl or Postman. The api url is `localhost:3000/onecall?lat={some latitidue}&lon={some longtitude}`.
