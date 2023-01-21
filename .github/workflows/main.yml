@@ -17,8 +17,9 @@ jobs:
         uses: actions/setup-node@v3.1.1
 
       - name: npm predeploy
-        run: |
+        run:
           working-directory: Website
+         |
           npm ci 
           npm run predeploy
 
