@@ -6,7 +6,7 @@ class MyCustomElement extends HTMLElement {
     }
     connectedCallback() {
         this.shadow.innerHTML = `
-        <button>
+        <button onclick="prose()">
             <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google logo">
             <span>Change Prose</span>
         </button>
@@ -30,7 +30,12 @@ class MyCustomElement extends HTMLElement {
         </style>
     `;
     }
+
+    
   }
   
   customElements.define("my-custom-element", MyCustomElement);
+  function prose(){
+    console.log("prose button clicked");
+  }
   
