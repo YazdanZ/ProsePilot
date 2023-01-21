@@ -15,7 +15,7 @@ class MyCustomElement extends HTMLElement {
         
         <div class="poweredbyprosepilot">
             <span class="poweredby" style="font-size:8pt">Powered by</span>
-            <img src="/Website/assets/images/logo.png" alt="ProsePilot logo" style="padding: 2px">
+            <img src="../Website/assets/images/logo.png" alt="ProsePilot logo" style="padding: 2px">
             <span class="prosepilot" style="font-size:10pt">ProsePilot</span>
         </div>
         <style>select {
