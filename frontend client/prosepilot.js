@@ -6,18 +6,22 @@ class MyCustomElement extends HTMLElement {
     connectedCallback() {
         this.shadow.innerHTML = `
         
-        <select class="pilot-selector" onchange="prose()">
-            <option value="default">Change Prose</option>
-            <option value="reddit">Reddit</option>
-            <option value="academic">Academic</option>
-            <option value="nytimes">New York Times</option>
-        </select>
+        <div class="button_container">
+            <select class="pilot-selector" onchange="prose()">
+                <option value="default">Change Prose</option>
+                <option value="reddit">Reddit</option>
+                <option value="academic">Academic</option>
+                <option value="nytimes">New York Times</option>
+            </select>
+            <div class="loader"></div> 
+        </div>
         
         <div class="poweredbyprosepilot">
             <span class="poweredby" style="font-size:8pt">Powered by</span>
             <img src="../Website/assets/images/logo.png" alt="ProsePilot logo" style="padding: 2px">
             <span class="prosepilot" style="font-size:10pt">ProsePilot</span>
         </div>
+        
         <style>select {
             background-color: #6080A7;
             color: #fff;
@@ -44,6 +48,28 @@ class MyCustomElement extends HTMLElement {
 
         .poweredbyprosepilot{
             vertical-align: middle;
+        }
+
+        .loader {
+            border: 5px solid #f3f3f3; /* Light grey */
+            border-top: 5px solid #6080A7; /* Blue */
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            animation: spin 2s linear infinite;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .button_container{
+            display: flex;
+            align-items: center;
+            
+        }
+          
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         
         
