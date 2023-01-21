@@ -12,10 +12,14 @@ class MyCustomElement extends HTMLElement {
             <option value="academic">Academic</option>
             <option value="nytimes">New York Times</option>
         </select>
-
-        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google logo">
+        
+        <div class="poweredbyprosepilot">
+            <span class="poweredby" style="font-size:8pt">Powered by</span>
+            <img src="/Website/assets/images/logo.png" alt="ProsePilot logo" style="padding: 2px">
+            <span class="prosepilot" style="font-size:10pt">ProsePilot</span>
+        </div>
         <style>select {
-            background-color: #4285F4;
+            background-color: #6080A7;
             color: #fff;
             padding: 8px 16px;
             border: none;
@@ -26,8 +30,20 @@ class MyCustomElement extends HTMLElement {
         }
         
         img {
-            width: 20px;
-            margin-right: 8px;
+            width: 15px;
+            vertical-align: bottom;
+        }
+
+        .prosepilot{
+            color:#6080A7;
+        }
+
+        .poweredby{
+            color:#808080;
+        }
+
+        .poweredbyprosepilot{
+            vertical-align: middle;
         }
         
         
