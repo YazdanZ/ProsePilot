@@ -18,10 +18,10 @@ jobs:
 
       - name: npm predeploy
         run:
-          working-directory: Website
          |
           npm ci 
           npm run predeploy
+        working-directory: Website
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.3.0
