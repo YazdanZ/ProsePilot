@@ -1,0 +1,52 @@
+{
+  "name": "ProsePilot",
+  "version": "1.0.0",
+  "description": "Read it your way!",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack && cp CNAME dist/CNAME",
+    "build-watch": "./node_modules/.bin/webpack --watch",
+    "serve": "./node_modules/.bin/webpack serve",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YazdanZ/ProsePilot.git"
+  },
+  "author": "Yazdan, David, Himel, Matthias",
+  "bugs": {
+    "url": "https://github.com/YazdanZ/ProsePilot/issues"
+  },
+  "homepage": "https://github.com/YazdanZ/ProsePilot#readme",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-syntax-import-meta": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-flow": "^7.16.7",
+    "babel-loader": "^8.2.4",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "gh-pages": "^3.2.3",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "node-sass": "^7.0.1",
+    "raw-loader": "^4.0.2",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.17.9",
+    "bluebird": "^3.7.2",
+    "classlist-polyfill": "^1.2.0",
+    "markdown": "^0.5.0",
+    "mouse-wheel": "^1.2.0",
+    "nord": "^0.2.1",
+    "util": "^0.12.4"
+  }
+}

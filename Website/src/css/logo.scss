@@ -1,0 +1,11 @@
+#logo {
+  height: calc(2 * var(--huge-font-size));
+  display: inline-block;
+  content: url("../../assets/images/logo.png");
+  vertical-align: middle;
+
+}
+
+.dark-theme #logo{
+  content: url("../../assets/images/logo_darktheme.png");
+}

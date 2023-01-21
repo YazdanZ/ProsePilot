@@ -1,0 +1,74 @@
+#themeswitcher {
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+.switch {
+  float: right;
+  margin: 1rem 0.5rem 0rem 0rem;
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 30px;
+  background: var(--nord0);
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: ease-in 0.5s;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch-label {
+  display: block;
+  width: 60px;
+  height: 30px;
+  text-indent: -150%;
+  clip: rect(0 0 0 0);
+  color: transparent;
+  user-select: none;
+  background: var(--def-fg-color);
+}
+.switch-label::before,
+.switch-label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+.switch-label::before {
+  //   content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  background: var(--def-bg-color);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: 0.6s;
+}
+.switch-label::after {
+  //   content: "";
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: 0.6s;
+  transform: translateX(50px);
+}
+.switch-input:checked + .switch-label::before {
+  transform: translateX(-50px);
+}
+.switch-input:checked + .switch-label::after {
+  transform: translateX(0px);
+  background-color: var(--def-bg-color);
+}
+
+body.dark-theme {
+  --def-bg-color: var(--nord0);
+  --def-fg-color: var(--nord6);
+  --def-sec-color: var(--nord8);
+  --def-ter-color: var(--nord7);
+}
