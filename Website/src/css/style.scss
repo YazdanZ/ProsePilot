@@ -1,0 +1,158 @@
+@import "tooltip";
+@import "logo";
+@import "coreconf";
+@import "themeswitcher";
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin-top: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--def-bg-color);
+  font-family: var(--def-font), sans-serif;
+  transition: all 0.3s;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--def-fg-color);
+}
+
+header {
+  width: 100%;
+  display: block;
+  height: 30px;
+  margin-bottom: 2rem;
+}
+
+main {
+  height: 75%;
+  margin: auto;
+  display: table;
+}
+
+footer {
+  padding-bottom: 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.home {
+  display: table-cell;
+  vertical-align: middle;
+  border: 1.5rem solid transparent;
+}
+
+i {
+  font-size: var(--icon-font-size);
+}
+
+h1 {
+  font-size: var(--huge-font-size);
+  font-weight: var(--huge-font-weight);
+}
+
+h2 {
+  font-size: var(--big-font-size);
+  font-weight: var(--big-font-weight);
+}
+
+p,
+ul {
+  font-size: var(--normal-font-size);
+  font-weight: var(--big-font-weight);
+}
+
+il {
+  white-space: nowrap;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+span,
+a {
+  color: var(--def-sec-color);
+}
+
+a {
+  white-space: nowrap;
+}
+
+i:hover,
+a:hover,
+a:active,
+a:focus {
+  color: var(--def-ter-color);
+}
+
+/* Selection colors */
+/*******************/
+::-moz-selection {
+  color: var(--selection-fg-color);
+  background: var(--selection-bg-color);
+}
+
+::selection {
+  color: var(--def-bg-color);
+  background: var(--def-fg-color);
+}
+
+/**
+* Make images unselectable.
+*/
+img {
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Media queries */
+/****************/
+@media screen and (min-width: 768px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .home.container {
+    border: 0rem solid transparent;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .home.container {
+    border: 0.5rem solid transparent;
+  }
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 568px) {
+  :root {
+    --huge-font-size: 5rem;
+    --big-font-size: 2.5rem;
+    --normal-font-size: 2rem;
+  }
+}
+
+#greeting-text {
+  color: var(--def-fg-color);
+}
+
+.social-icon {
+  text-decoration: none;
+}

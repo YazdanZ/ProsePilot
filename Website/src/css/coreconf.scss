@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap");
+@import "nord";
+
+:root {
+  /* Font family */
+  --def-font: "Quicksand";
+
+  /* Font sizes */
+  --huge-font-size: 3rem;
+  --big-font-size: 1.5rem;
+  --normal-font-size: 1.2rem;
+
+  --icon-font-size: 1.3em;
+
+  --huge-font-weight: 700;
+  --big-font-weight: 500;
+
+  /* light mode colors */
+  --def-bg-color: white;
+  --def-fg-color: var(--nord3);
+  --def-sec-color: var(--nord10);
+  --def-ter-color: var(--nord9);
+}
