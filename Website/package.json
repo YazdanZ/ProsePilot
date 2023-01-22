@@ -47,6 +47,7 @@
     "markdown": "^0.5.0",
     "mouse-wheel": "^1.2.0",
     "nord": "^0.2.1",
+    "nord-highlightjs": "^0.2.0",
     "util": "^0.12.4"
   }
 }

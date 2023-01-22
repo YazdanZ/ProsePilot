@@ -4,6 +4,7 @@
 @import "themeswitcher";
 @import "carousel";
 @import "box";
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -128,6 +129,7 @@ img {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+
   .home.container {
     border: 0rem solid transparent;
   }
@@ -138,6 +140,7 @@ img {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
+
   .home.container {
     border: 0.5rem solid transparent;
   }
@@ -159,4 +162,39 @@ img {
 
 .social-icon {
   text-decoration: none;
+}
+
+pre {
+  padding-top: 10px;
+  background-color: var(--nord3);
+  color: var(--def-bg-color);
+  font-size: var(--tiny-font-size);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+p {
+  text-align: justify;
+}
+
+pre::-moz-selection {
+  color: var(--selection-bg-color);
+  background: var(--selection-fg-color);
+}
+
+
+pre::selection {
+  color: var(--def-fg-color);
+  background: var(--def-bg-color);
+
+}
+#inline-code{
+  font-family:'Lucida Console', monospace; 
+  font-size: var(--tiny-font-size);
+  display: inline;
+  color: var(--def-fg-color)
+}
+
+.hljs {
+  background-color: var(--nord3);
 }

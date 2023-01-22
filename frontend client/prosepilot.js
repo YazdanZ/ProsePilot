@@ -18,9 +18,9 @@ class MyCustomElement extends HTMLElement {
         </div>
         
         <div class="poweredbyprosepilot">
-            <span class="poweredby" style="font-size:8pt">Powered by</span>
-            <img src="/assets/images/logo.png" alt="ProsePilot logo" style="padding: 2px">
-            <span class="prosepilot" style="font-size:10pt">ProsePilot</span>
+            <span class="poweredby" style="font-size:9pt">Powered by</span>
+            <img src="https://cdn.discordapp.com/attachments/1066065493825425418/1066536718427246693/logo.png" alt="ProsePilot logo" style="padding: 2px">
+            <span class="prosepilot" style="font-size:11pt">ProsePilot</span>
         </div>
         
         <style>select {
@@ -35,16 +35,16 @@ class MyCustomElement extends HTMLElement {
         }
         
         img {
-            width: 15px;
+            width: 20px;
             vertical-align: bottom;
         }
 
         .prosepilot{
-            color:#6080A7;
+            color:#88c0d0;
         }
 
         .poweredby{
-            color:#808080;
+            color:#88c0d0;
         }
 
         .poweredbyprosepilot{
@@ -82,7 +82,7 @@ class MyCustomElement extends HTMLElement {
     
   }
 
-  customElements.define("my-custom-element", MyCustomElement);
+  customElements.define("prosepilot-element", MyCustomElement);
   var newTexts = new Object(); // stores different non-original versions of texts
   var dict = {
     "default": [],
@@ -92,11 +92,11 @@ class MyCustomElement extends HTMLElement {
     "nytimes": []
   };
   async function prose() {
-    var node = document.querySelector('my-custom-element').shadowRoot.getElementById('load')
+    var node = document.querySelector('prosepilot-element').shadowRoot.getElementById('load')
     var visibility = node.style.visibility;
     node.style.visibility = "visible";
 
-    const dropdown = document.querySelector('my-custom-element').shadowRoot.querySelector("select");
+    const dropdown = document.querySelector('prosepilot-element').shadowRoot.querySelector("select");
     const selectedValue = dropdown.value;
     const elements = document.getElementsByClassName("prosepilot-text-select");
     // if cached, load array. If returning to original, load array
@@ -131,13 +131,13 @@ class MyCustomElement extends HTMLElement {
 }
 
 function makeVisible() {
-    var node = document.querySelector('my-custom-element').shadowRoot.getElementById('load')
+    var node = document.querySelector('prosepilot-element').shadowRoot.getElementById('load')
     var visibility = node.style.visibility;
     node.style.visibility = "visible";
 }
 
 async function callgpt(inputtext, style) {
-    pilotButton = document.getElementsByName("my-custom-element");
+    pilotButton = document.getElementsByName("prosepilot-element");
     const apiKey = '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';
     const model = "text-davinci-003";
     //const prompt = "Say this is a test:";
