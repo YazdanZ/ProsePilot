@@ -3,6 +3,7 @@
 @import "coreconf";
 @import "themeswitcher";
 @import "carousel";
+@import "box";
 * {
   box-sizing: border-box;
   padding: 0;
@@ -41,7 +42,7 @@ footer {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
@@ -64,6 +65,7 @@ h1 {
 h2 {
   font-size: var(--big-font-size);
   font-weight: var(--big-font-weight);
+  margin-bottom: 70px;
 }
 
 p,
@@ -146,7 +148,8 @@ img {
   :root {
     --huge-font-size: 5rem;
     --big-font-size: 2.5rem;
-    --normal-font-size: 2rem;
+    --normal-font-size: 1.5rem;
+    --small-font-size: 1.2rem
   }
 }
 
