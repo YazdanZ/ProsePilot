@@ -1,0 +1,49 @@
+@import "coreconf";
+
+#box {
+    border-radius: 15px;
+    background: var(--def-fg-color);
+    color: var(--def-bg-color);
+    font-size: var(--small-font-size);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: justify;
+    padding-left:30px
+
+  } 
+
+#description {
+  font-size: var(--normal-font-size);
+  text-align: justify ;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px 30px 10px 0;
+
+}
+
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+   clear: both;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}

@@ -1,0 +1,60 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+
+$numberOfElements: 4; 
+$fontSize: 50px;
+
+
+.carousel {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	
+	position: relative;
+	width: 100%;
+	font-size: $fontSize;
+	line-height: $fontSize * 1.5;
+	height: $fontSize * 1.5;
+	
+	.pre {
+		display: inline-block;
+		height: $fontSize * 1.5;
+	}
+	
+	.change_outer {	  
+		vertical-align: top;
+		display: inline-block;
+
+		// text-align: left;
+		height: $fontSize * 1.5;
+		overflow: hidden;
+		
+		.change_inner {
+			position: relative;
+			animation: rotate 10s ease-in-out infinite;
+		}
+		
+		.element {
+			display: block;
+		}
+		
+	}
+	
+}
+
+@keyframes rotate {
+	0%, 20% {
+		transform: translateY(0);
+	}
+	25%,45% {
+		transform: translateY($fontSize * -1.5);
+	}
+	50%,70% {
+		transform: translateY($fontSize * -3);
+	}
+	75%,95% {
+		transform: translateY($fontSize * -4.5);
+	}
+}

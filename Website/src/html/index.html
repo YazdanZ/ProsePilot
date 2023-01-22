@@ -1,48 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link
-      rel="icon"
-      type="image/png"
-      href="../../assets/images/logo.png"
-      hreflang="en"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Read it your way!" />
-    <meta name="author" content="Yazdan, David, Himel, Matthias" />
-    <meta
-      name="keywords"
-      content="ProsePilot, ConUhacks"
-    />
-    <title>ProsePilot</title>
-  </head>
-  <body>
-    <header>
-      <div class="switch">
-        <input id="themeswitcher" type="checkbox" class="switch-input" />
-        <label for="themeswitcher" class="switch-label"> </label>
+
+<head>
+  <link rel="icon" type="image/png" href="../../assets/images/logo.png" hreflang="en" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  <script type="text/javascript" src="../../../frontend client/prosepilot.js"></script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Read it your way!" />
+  <meta name="author" content="Yazdan, David, Himel, Matthias" />
+  <meta name="keywords" content="ProsePilot, ConUhacks" />
+  <title>ProsePilot</title>
+</head>
+
+<body>
+  <header>
+    <div class="switch">
+      <input id="themeswitcher" type="checkbox" class="switch-input" />
+      <label for="themeswitcher" class="switch-label"> </label>
+    </div>
+  </header>
+  <main>
+    <section class="home container">
+      <h1>
+        <img id="logo" src="../../assets/images/logo.png" />
+        <span>ProsePilot</span>
+      </h1>
+
+      <h2>
+
+        <div class="carousel">
+          <!-- <div class="pre">I'm a </div> -->
+          <div class="pre">Read it </div>
+
+          <div class="change_outer">
+            <div class="change_inner">
+              <span>
+                <div class="element">like a 5 year old</div>
+                <div class="element">like a redditor</div>
+                <div class="element">like an academic</div>
+                <div class="element">your way!</div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </h2>
+
+      <div class="row">
+        <div class="column" id="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt massa at laoreet
+          ultrices. Aenean
+          pretium velit quis ornare venenatis. In a sapien et tellus volutpat blandit eget a purus. Suspendisse sapien
+          elit, bibendum in molestie non, bibendum ut tortor. Phasellus vulputate nisi neque, quis hendrerit urna
+          consequat at. Sed lacinia convallis risus in facilisis. Suspendisse fringilla tempor elit. Phasellus aliquet
+          hendrerit porttitor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          Quisque tortor urna, aliquet a congue id, aliquam at augue. Donec mattis purus sem, non efficitur mi blandit
+          eget. Integer at molestie magna. Etiam posuere finibus mollis. Fusce vestibulum vehicula diam. Maecenas
+          consequat dui at elit egestas aliquam.
+        </div>
+        <div class="column" id="box">
+          <my-custom-element></my-custom-element>
+          <div class="prosepilot-text-select">
+            In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual
+            form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a
+            placeholder before final copy is available. It is also used to temporarily replace text in a process called
+            greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the
+            text influencing the design.
+            <br />
+            Lorem ipsum is typically a corrupted version of De finibus bonorum et malorum, a 1st-century BC text by the
+            Roman statesman and philosopher Cicero, with words altered, added, and removed to make it nonsensical and
+            improper Latin.
+            <br />
+            Versions of the Lorem ipsum text have been used in typesetting at least since the 1960s, when it was
+            popularized by advertisements for Letraset transfer sheets. Lorem ipsum was introduced to the digital world in
+            the mid-1980s, when Aldus employed it in graphic and word-processing templates for its desktop publishing
+            program PageMaker. Other popular word processors, including Pages and Microsoft Word, have since adopted Lorem
+            ipsum, as have many LaTeX packages
+  
+          </div>
+        </div>
       </div>
-    </header>
-    <main>
-      <section class="home container">
-        <h1>
-          <img id="logo" src="../../assets/images/logo.png" />
-          <span>ProsePilot</span>
-        </h1>
-        <h2>
-          <span>Read it your way!</span>
-        </h2>
-        <h3>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt massa at laoreet ultrices. Aenean pretium velit quis ornare venenatis. In a sapien et tellus volutpat blandit eget a purus. Suspendisse sapien elit, bibendum in molestie non, bibendum ut tortor. Phasellus vulputate nisi neque, quis hendrerit urna consequat at. Sed lacinia convallis risus in facilisis. Suspendisse fringilla tempor elit. Phasellus aliquet hendrerit porttitor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque tortor urna, aliquet a congue id, aliquam at augue. Donec mattis purus sem, non efficitur mi blandit eget. Integer at molestie magna. Etiam posuere finibus mollis. Fusce vestibulum vehicula diam. Maecenas consequat dui at elit egestas aliquam.
+    </section>
+  </main>
 
-        </h3>
-      </section>
-    </main>
+</body>
 
-  </body>
 </html>
