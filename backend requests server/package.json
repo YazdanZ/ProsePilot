@@ -19,7 +19,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-rate-limit": "^5.0.0",
-    "node-fetch": "^3.1.1",
+    "node-fetch": "^2.6.1",
     "xml-js": "^1.6.11"
   },
   "repository": {
@@ -34,6 +34,5 @@
   "bugs": {
     "url": "https://github.com/gskumawat0/example-goodreads-api-relay/issues"
   },
-  "homepage": "https://github.com/gskumawat0/example-goodreads-api-relay#readme",
-  "devDependencies": {}
+  "homepage": "https://github.com/gskumawat0/example-goodreads-api-relay#readme"
 }
