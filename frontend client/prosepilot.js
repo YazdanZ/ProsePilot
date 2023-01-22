@@ -63,6 +63,7 @@ class MyCustomElement extends HTMLElement {
         }
 
         .button_container{
+            margin-top:5px;
             display: flex;
             align-items: center;
             
