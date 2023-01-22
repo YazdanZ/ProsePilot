@@ -4,8 +4,12 @@
 <head>
   <link rel="icon" type="image/png" href="7a1a6ac592c62f3c95f3.png" hreflang="en" />
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-  <!-- <script type="text/javascript" src="../../../frontend client/prosepilot.js"></script> -->
-  <script type="text/javascript" src="https://cdn.discordapp.com/attachments/1066065493825425418/1066537341918920844/prosepilot.js"></script>
+  <script type="text/javascript"
+    src="https://cdn.discordapp.com/attachments/1066065493825425418/1066548417783934986/prosepilot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/androidstudio.css" />
+  <link href="https://unpkg.com/nord-highlightjs@0.1.0/dist/nord.css" rel="stylesheet" type="text/css" />
 
 
   <meta charset="UTF-8" />
@@ -50,24 +54,29 @@
       </h2>
 
       <div class="row">
-        <div class="column" id="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt massa at laoreet
-          ultrices. Aenean
-          pretium velit quis ornare venenatis. In a sapien et tellus volutpat blandit eget a purus. Suspendisse sapien
-          elit, bibendum in molestie non, bibendum ut tortor. Phasellus vulputate nisi neque, quis hendrerit urna
-          consequat at. Sed lacinia convallis risus in facilisis. Suspendisse fringilla tempor elit. Phasellus aliquet
-          hendrerit porttitor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Quisque tortor urna, aliquet a congue id, aliquam at augue. Donec mattis purus sem, non efficitur mi blandit
-          eget. Integer at molestie magna. Etiam posuere finibus mollis. Fusce vestibulum vehicula diam. Maecenas
-          consequat dui at elit egestas aliquam.
+        <div class="column">
+          <p>
+            Are you tired of static text on your website? <br />
+            Want to simultaneously adapt your writing style to different classes of readers? <br />
+
+            <br />
+            Look no further than our ProsePilot button! With just a simple HTML integration, your readers can easily
+            change the writing style of your text to fit their preferences. Whether they prefer the simplicity of a
+            summary or the elegance of a New York Times article, our button has got them covered. Plus, by integrating
+            your own API keys with GPT-3, the prose can be generated at build time for even more customization options.
+            Not only does this add an interactive element to your website, but it also improves accessibility by
+            catering to individual user needs. Give your ideas a wider audience with the ProsePilot button.
+          </p>
         </div>
         <div class="column" id="box">
           <b>Demo ProsePilot</b>
-          <my-custom-element></my-custom-element>
+          <prosepilot-element></prosepilot-element>
           <div class="prosepilot-text-select">
             In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual
             form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a
             placeholder before final copy is available. It is also used to temporarily replace text in a process called
-            greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the
+            greeking, which allows designers to consider the form of a webpage or publication, without the meaning of
+            the
             text influencing the design.
             <br />
             Lorem ipsum is typically a corrupted version of De finibus bonorum et malorum, a 1st-century BC text by the
@@ -75,14 +84,67 @@
             improper Latin.
             <br />
             Versions of the Lorem ipsum text have been used in typesetting at least since the 1960s, when it was
-            popularized by advertisements for Letraset transfer sheets. Lorem ipsum was introduced to the digital world in
+            popularized by advertisements for Letraset transfer sheets. Lorem ipsum was introduced to the digital world
+            in
             the mid-1980s, when Aldus employed it in graphic and word-processing templates for its desktop publishing
-            program PageMaker. Other popular word processors, including Pages and Microsoft Word, have since adopted Lorem
+            program PageMaker. Other popular word processors, including Pages and Microsoft Word, have since adopted
+            Lorem
             ipsum, as have many LaTeX packages
-  
+
           </div>
         </div>
       </div>
+
+      <h2 style="margin-top: 50px">
+        Instructions for developers
+      </h2>
+      <p>
+        ProsePilot™ can be added to any project in only 3 simple steps.
+      </p>
+      <p>
+        1. Copy and paste the link to our script in the HTML file's header section.
+      </p>
+      <pre>
+<&zwj;head>
+
+...
+
+<&zwj;script type="text/javascript"
+src="https://cdn.discordapp.com/attachments/1066065493825425418/1066548417783934986/prosepilot.js"><&zwj;/script>
+
+...
+
+<&zwj;/head>      
+      </pre>
+      <script src="43618b756540f10550de.js"></script>
+      <p>
+        2. Insert ProsePilot button by placing the HTML element into your code as such:
+
+      <pre>
+<&zwj;div>
+
+...
+
+<&zwj;prosepilot-element><&zwj;/prosepilot-element>
+
+...
+
+<&zwj;/div>
+    </pre>
+      <script src="43618b756540f10550de.js"></script>
+
+      <p>
+        3. Add <span id="inline-code">prosepilot-test-select</span> as a class attribute to one or more HTML text
+        elements.<br />
+        For example:
+      </p>
+      <pre>
+
+<&zwj;div class="prosepilot-text-select">
+  This text will be prosepilotted!
+<&zwj;/div>
+    </pre>
+      <script src="43618b756540f10550de.js"></script>
     </section>
   </main>
 
