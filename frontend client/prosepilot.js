@@ -6,16 +6,24 @@ class MyCustomElement extends HTMLElement {
     connectedCallback() {
         this.shadow.innerHTML = `
         
-        <select class="pilot-selector" onchange="prose()">
-            <option value="default">Change Prose</option>
-            <option value="reddit">Reddit</option>
-            <option value="academic">Academic</option>
-            <option value="nytimes">New York Times</option>
-        </select>
-
-        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google logo">
+        <div class="button_container">
+            <select class="pilot-selector" onchange="prose()">
+                <option value="default">Change Prose</option>
+                <option value="reddit">Reddit</option>
+                <option value="academic">Academic</option>
+                <option value="nytimes">New York Times</option>
+            </select>
+            <div class="loader"></div> 
+        </div>
+        
+        <div class="poweredbyprosepilot">
+            <span class="poweredby" style="font-size:8pt">Powered by</span>
+            <img src="../Website/assets/images/logo.png" alt="ProsePilot logo" style="padding: 2px">
+            <span class="prosepilot" style="font-size:10pt">ProsePilot</span>
+        </div>
+        
         <style>select {
-            background-color: #4285F4;
+            background-color: #6080A7;
             color: #fff;
             padding: 8px 16px;
             border: none;
@@ -26,8 +34,42 @@ class MyCustomElement extends HTMLElement {
         }
         
         img {
-            width: 20px;
-            margin-right: 8px;
+            width: 15px;
+            vertical-align: bottom;
+        }
+
+        .prosepilot{
+            color:#6080A7;
+        }
+
+        .poweredby{
+            color:#808080;
+        }
+
+        .poweredbyprosepilot{
+            vertical-align: middle;
+        }
+
+        .loader {
+            border: 5px solid #f3f3f3; /* Light grey */
+            border-top: 5px solid #6080A7; /* Blue */
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            animation: spin 2s linear infinite;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .button_container{
+            display: flex;
+            align-items: center;
+            
+        }
+          
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         
         
@@ -39,16 +81,43 @@ class MyCustomElement extends HTMLElement {
   }
   
   customElements.define("my-custom-element", MyCustomElement);
+  var newTexts = new Object(); // stores different non-original versions of texts
+  var dict = {
+    "default": [],
+    "reddit": [],
+    "academic": [],
+    "nytimes": []
+  };
   async function prose() {
     const dropdown = document.querySelector('my-custom-element').shadowRoot.querySelector("select");
     const selectedValue = dropdown.value;
     const elements = document.getElementsByClassName("prosepilot-text-select");
-    for (const element of elements) {
-        // Get the text from the element and nested elements
-        const text = element.textContent;
-        const result = await callgpt(text, selectedValue)
-        element.textContent = result
+    // if cached, load array. If returning to original, load array
+    if (dict[selectedValue].length!=0 || selectedValue=="default") {
+        var i = 0;
+        for (const element of elements) {
+            element.textContent = dict[selectedValue][i]
+        }
+        i++;
+        return;
     }
+    else {
+        // save original if needed
+        if (dict["default"].length==0) {
+            for (const element of elements) {
+                dict["default"].push(element.textContent)
+            }
+        } 
+        // do API call and save to array
+        for (const element of elements) {
+            const text = element.textContent;
+            // Get the text from the element and nested elements
+            const result = await callgpt(text, selectedValue)
+            element.textContent = result
+            dict[selectedValue].push(result)
+        }
+    }
+    
 
 }
 
