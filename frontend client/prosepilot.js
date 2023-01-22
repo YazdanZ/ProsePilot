@@ -9,6 +9,7 @@ class MyCustomElement extends HTMLElement {
         <div class="button_container">
             <select class="pilot-selector" onchange="prose()">
                 <option value="default">Change Prose</option>
+                <option value="a five year old">Five year old</option>
                 <option value="reddit">Reddit</option>
                 <option value="academic">Academic</option>
                 <option value="nytimes">New York Times</option>
@@ -18,7 +19,7 @@ class MyCustomElement extends HTMLElement {
         
         <div class="poweredbyprosepilot">
             <span class="poweredby" style="font-size:8pt">Powered by</span>
-            <img src="../Website/assets/images/logo.png" alt="ProsePilot logo" style="padding: 2px">
+            <img src="/assets/images/logo.png" alt="ProsePilot logo" style="padding: 2px">
             <span class="prosepilot" style="font-size:10pt">ProsePilot</span>
         </div>
         
@@ -79,11 +80,12 @@ class MyCustomElement extends HTMLElement {
 
     
   }
-  
+
   customElements.define("my-custom-element", MyCustomElement);
   var newTexts = new Object(); // stores different non-original versions of texts
   var dict = {
     "default": [],
+    "a five year old": [],
     "reddit": [],
     "academic": [],
     "nytimes": []
@@ -123,7 +125,7 @@ class MyCustomElement extends HTMLElement {
 
 async function callgpt(inputtext, style) {
     pilotButton = document.getElementsByName("my-custom-element");
-    const apiKey = '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';
+    const apiKey = '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';
     const model = "text-davinci-003";
     //const prompt = "Say this is a test:";
     const prompt = "Write the following text in the style of " + style + ":\n" + inputtext;
