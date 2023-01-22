@@ -1,4 +1,11 @@
-# ProsePilot
+# [ProsePilot](https://yazdanz.github.io/ProsePilot/)
+
+  [![CI](https://github.com/YazdanZ/ProsePilot/actions/workflows/main.yml/badge.svg?branch=gh-pages)](https://github.com/YazdanZ/ProsePilot/actions/workflows/main.yml)
+  [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://yazdanz.github.io/ProsePilot/)
+
+  <img src="https://github.com/YazdanZ/ProsePilot/blob/master/Website/assets/images/logo.png?raw=true" width=175> 
+  
+
 
 Are you tired of static text on your website?
 Want to simultaneously adapt your writing style to different classes of readers?
