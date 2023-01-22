@@ -13,6 +13,7 @@ class MyCustomElement extends HTMLElement {
                 <option value="reddit">Reddit</option>
                 <option value="academic">Academic</option>
                 <option value="nytimes">New York Times</option>
+                <option value="a very short summary">Summary</option>
             </select>
             <div class="loader" id="load" style="visibility: hidden"></div> 
         </div>
@@ -89,7 +90,8 @@ class MyCustomElement extends HTMLElement {
     "a five year old": [],
     "reddit": [],
     "academic": [],
-    "nytimes": []
+    "nytimes": [], 
+    "a very short summary": [],
   };
   async function prose() {
     var node = document.querySelector('prosepilot-element').shadowRoot.getElementById('load')
