@@ -140,7 +140,7 @@ function makeVisible() {
 
 async function callgpt(inputtext, style) {
     pilotButton = document.getElementsByName("prosepilot-element");
-    const apiKey = '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';
+    const apiKey = 'secret';
     const model = "text-davinci-003";
     //const prompt = "Say this is a test:";
     const prompt = "Write the following text in the style of " + style + ":\n" + inputtext;
