@@ -14,7 +14,7 @@ class MyCustomElement extends HTMLElement {
                 <option value="academic">Academic</option>
                 <option value="nytimes">New York Times</option>
             </select>
-            <div class="loader"></div> 
+            <div class="loader" id="load" style="visibility: hidden"></div> 
         </div>
         
         <div class="poweredbyprosepilot">
@@ -91,6 +91,10 @@ class MyCustomElement extends HTMLElement {
     "nytimes": []
   };
   async function prose() {
+    var node = document.querySelector('my-custom-element').shadowRoot.getElementById('load')
+    var visibility = node.style.visibility;
+    node.style.visibility = "visible";
+
     const dropdown = document.querySelector('my-custom-element').shadowRoot.querySelector("select");
     const selectedValue = dropdown.value;
     const elements = document.getElementsByClassName("prosepilot-text-select");
@@ -101,6 +105,7 @@ class MyCustomElement extends HTMLElement {
             element.textContent = dict[selectedValue][i]
         }
         i++;
+        node.style.visibility = "hidden";
         return;
     }
     else {
@@ -118,9 +123,16 @@ class MyCustomElement extends HTMLElement {
             element.textContent = result
             dict[selectedValue].push(result)
         }
+        node.style.visibility = "hidden";
     }
     
 
+}
+
+function makeVisible() {
+    var node = document.querySelector('my-custom-element').shadowRoot.getElementById('load')
+    var visibility = node.style.visibility;
+    node.style.visibility = "visible";
 }
 
 async function callgpt(inputtext, style) {
